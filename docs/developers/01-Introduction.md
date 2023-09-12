@@ -19,4 +19,4 @@ It is required to always update the documentation when needed as defined in the 
 
 We use [Vuepress](https://v2.vuepress.vuejs.org/) to populate this documentation site.  
 Is based on Markdown files with extra features supported like HTML in markdown, components, frontmatter, etc.  
-you can run the project locally following the [getting-started steps](/getting-started.html#documentation-site)
+you can run the project locally following the [getting-started steps](02-Getting started)
