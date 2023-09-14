@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://research.software',
+  url: 'https://dmijatovic.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/rsd-docusaurus-test/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'research-software-directory', // Usually your GitHub org/user name.
-  projectName: 'documentation', // Usually your repo name.
+  organizationName: 'dmijatovic', // Usually your GitHub org/user name.
+  projectName: 'rsd-docusaurus-test', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -57,7 +57,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:'https://github.com/dmijatovic/rsd-docusaurus-test',
+          editUrl:'https://github.com/dmijatovic/rsd-docusaurus-test/edit/main',
           // do not use current/next version
           includeCurrentVersion: false,
           showLastUpdateTime: true,
