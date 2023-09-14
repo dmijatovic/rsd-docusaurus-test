@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'RSD',
+  title: 'RSD documentation',
   tagline: 'RSD documentation',
   favicon: 'img/favicon.ico',
 
@@ -21,7 +21,7 @@ const config = {
   organizationName: 'research-software-directory', // Usually your GitHub org/user name.
   projectName: 'documentation', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -29,10 +29,23 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en','nl'],
+    localeConfigs:{
+      en:{
+        label: "English",
+        htmlLang: 'en-GB',
+      },
+      nl:{
+        label: "Nederlands",
+        htmlLang: 'nl-NL',
+      }
+    }
   },
 
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [[require.resolve('docusaurus-lunr-search'),{
+    // language codes
+    languages: ['en','nl']
+  }]],
 
   presets: [
     [
@@ -44,8 +57,11 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:'https://github.com/dmijatovic/rsd-docusaurus-test',
+          // do not use current/next version
+          includeCurrentVersion: false,
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: false
         },
         blog: false,
         theme: {
@@ -66,13 +82,17 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '',
+        title: 'RSD Documentation',
         logo: {
           alt: 'RSD logo',
-          src: 'img/logo.svg',
+          src: 'img/circle.webp',
         },
         hideOnScroll: false,
         items: [
+          {
+            type: "docsVersionDropdown",
+            position: "left"
+          },
           {
             label: "Users",
             to: "/category/user-documentation",
@@ -80,14 +100,22 @@ const config = {
           },
           {
             label: 'Developers',
-            to:'/category/technical-documentation',
+            to:'/category/developer-documentation',
             position: 'left',
           },
           {
-            type: 'search',
-            position: 'left',
+            type: "localeDropdown",
+            position: "right"
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'search',
+            position: 'right',
+          },
+          {
+            href: 'https://research.software',
+            position: 'right',
+            label: 'RSD live',
+          },
           {
             href: 'https://github.com/research-software-directory/RSD-as-a-service',
             label: 'GitHub',
@@ -107,7 +135,7 @@ const config = {
               },
               {
                 label: 'Developers documentation',
-                to:'/category/technical-documentation'
+                to:'/category/developer-documentation'
               },
             ],
           },

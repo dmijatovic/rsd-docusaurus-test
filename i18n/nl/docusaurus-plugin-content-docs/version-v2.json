@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "v2",
+    "description": "The label for version 2.x.x"
+  },
+  "sidebar.docsSidebar.category.User documentation": {
+    "message": "User documentation",
+    "description": "The label for category User documentation in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Developer documentation": {
+    "message": "Developer documentation",
+    "description": "The label for category Developer documentation in sidebar docsSidebar"
+  }
+}

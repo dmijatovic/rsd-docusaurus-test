@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "RSD Documentation",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "RSD logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Users": {
+    "message": "Users",
+    "description": "Navbar item with label Users"
+  },
+  "item.label.Developers": {
+    "message": "Developers",
+    "description": "Navbar item with label Developers"
+  },
+  "item.label.RSD live": {
+    "message": "RSD live",
+    "description": "Navbar item with label RSD live"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
