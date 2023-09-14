@@ -63,16 +63,37 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
+The documentation is published in the separate repo. You need to have access to documentation repo to be able to publish.
+The information about where documenation will be published is stored in docusaurus.config.js
+
+```javascript
+...
+  // Set the production url of your site here
+  url: 'https://dmijatovic.github.io/',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/rsd-documentation/',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'dmijatovic', // Usually your GitHub org/user name.
+  projectName: 'rsd-documentation', // Usually your repo name.
+  deploymentBranch: 'main',
+...
+
+```
+
 Using SSH:
 
 ```bash
-USE_SSH=true yarn deploy
+# use npm script
+npm run ssh:deploy
+# use basic deploy script
+USE_SSH=true npm run deploy
 ```
 
 Not using SSH:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+GIT_USER=<Your GitHub username> npm run deploy
 ```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
